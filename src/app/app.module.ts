@@ -10,7 +10,12 @@ import { IndexComponent } from './layouts/clients/index/index.component';
 import { InforComponent } from './layouts/clients/infor/infor.component';
 import { PhonesComponent } from './layouts/clients/phones/phones.component';
 import { PhoneDetailComponent } from './layouts/clients/phone-detail/phone-detail.component';
-
+import { AsideComponent } from './layouts/admin/aside/aside.component';
+import { IndexAdminComponent } from './layouts/admin/index/index.component';
+import { HeaderAdminComponent } from './layouts/admin/header/header.component';
+import { FooterAdminComponent } from './layouts/admin/footer/footer.component';
+import { PhoneFormComponent } from './layouts/admin/phone-form/phone-form.component';
+import { PhoneListComponent } from './layouts/admin/phone-list/phone-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +24,11 @@ import { PhoneDetailComponent } from './layouts/clients/phone-detail/phone-detai
     IndexComponent,
     InforComponent,
     PhonesComponent,
-    PhoneDetailComponent
+    PhoneDetailComponent,
+    AsideComponent,
+    IndexAdminComponent,
+    HeaderAdminComponent, 
+    FooterAdminComponent, PhoneFormComponent, PhoneListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,11 @@
+import { PhoneListComponent } from './layouts/admin/phone-list/phone-list.component';
+import { PhoneFormComponent } from './layouts/admin/phone-form/phone-form.component';
 import { PhoneDetailComponent } from './layouts/clients/phone-detail/phone-detail.component';
 import { PhonesComponent } from './layouts/clients/phones/phones.component';
 import { InforComponent } from './layouts/clients/infor/infor.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { IndexAdminComponent } from './layouts/admin/index/index.component';
 import { IndexComponent } from './layouts/clients/index/index.component';
 
 const routes: Routes = [
@@ -24,6 +27,24 @@ const routes: Routes = [
     path: 'phones/:id',
     component: PhoneDetailComponent
   },
+  {
+    path: 'admin',
+    component: IndexAdminComponent,
+    children: [
+      {
+        path: '',
+        component: InforComponent
+      },
+      {
+        path: 'phones',
+        component: PhoneListComponent
+      },
+      {
+        path: 'phone/:id',
+        component: PhoneFormComponent
+      }
+    ]
+  }
 
 ];
 

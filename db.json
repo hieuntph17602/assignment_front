@@ -1,7 +1,53 @@
 {
-    "products":[
-        {   
-            
-        }
-    ]
+  "products": [
+    {
+      "name": "Iphone 13 mini cc",
+      "desc": "Hàng siêu lướt",
+      "image": "https://cdn01.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture//Apro/Apro_product_27014/iphone-13-mini-_main_373_1020.png.webp",
+      "price": 123456789,
+      "status": 1,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Iphone 13 mini",
+      "desc": "Hàng siêu lướt",
+      "price": 123456789,
+      "image": "https://cdn01.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture//Apro/Apro_product_27014/iphone-13-mini-_main_373_1020.png.webp",
+      "status": 1
+    },
+    {
+      "id": 5,
+      "name": "Iphone 13 mini",
+      "desc": "Hàng siêu lướt",
+      "price": 123456789,
+      "image": "https://cdn01.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture//Apro/Apro_product_27014/iphone-13-mini-_main_373_1020.png.webp",
+      "status": 1
+    },
+    {
+      "name": "Iphone 13 mini",
+      "price": 123456,
+      "image": "https://cdn01.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture//Apro/Apro_product_27014/iphone-13-mini-_main_373_1020.png.webp",
+      "status": 1,
+      "desc": "Hàng siêu lướt",
+      "id": 7
+    },
+    {
+      "name": "Iphone 13 mini",
+      "price": 12345611,
+      "image": "https://cdn01.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture//Apro/Apro_product_27014/iphone-13-mini-_main_373_1020.png.webp",
+      "status": 1,
+      "desc": "Hàng siêu lướt",
+      "id": 8
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Nguyễn Trung Hiếu",
+      "email": "hieuntph17602@fpt.edu.vn",
+      "googleId": "114948936163274950151",
+      "avatar": "https://lh3.googleusercontent.com/a/AATXAJylEt0R68agHlhOn47kowixkwP_Wis5mT27fsS6=s96-c"
+    }
+  ]
 }

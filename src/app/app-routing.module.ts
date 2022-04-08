@@ -1,3 +1,4 @@
+import { LoginComponent } from './layouts/clients/login/login.component';
 import { PhoneListComponent } from './layouts/admin/phone-list/phone-list.component';
 import { PhoneFormComponent } from './layouts/admin/phone-form/phone-form.component';
 import { PhoneDetailComponent } from './layouts/clients/phone-detail/phone-detail.component';
@@ -16,16 +17,20 @@ const routes: Routes = [
       {
         path: '',
         component: InforComponent
-      }
+      },
+      {
+        path: 'phones',
+        component: PhonesComponent
+      },
+      {
+        path: 'phones/:id',
+        component: PhoneDetailComponent
+      },
     ]
   },
   {
-    path: 'phones',
-    component: PhonesComponent
-  },
-  {
-    path: 'phones/:id',
-    component: PhoneDetailComponent
+    path:'login',
+    component:LoginComponent
   },
   {
     path: 'admin',
@@ -40,7 +45,11 @@ const routes: Routes = [
         component: PhoneListComponent
       },
       {
-        path: 'phone/:id',
+        path: 'phones/create',
+        component: PhoneFormComponent
+      },
+      {
+        path: 'phones/edit/:id',
         component: PhoneFormComponent
       }
     ]

@@ -11,7 +11,8 @@ import { PhonesService } from 'src/app/services/phones/phones.service';
 export class PhoneFormComponent implements OnInit {
   id: string | undefined;
   phone: any;
-  phoneForm : FormGroup;
+  phoneForm: FormGroup;
+  imageBase64: any;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -47,17 +48,58 @@ export class PhoneFormComponent implements OnInit {
     }
   }
 
-  onSubmit(obj: any) {
+  onSubmit(obj: {
+    name: string,
+    desc: string,
+    price: number,
+    status: number
+  }) {
+    if (!this.imageBase64) {
+      this.imageBase64 = this.phone.image;
+    }
+    const submitData = {
+      ...obj,
+      image: this.imageBase64
+    };
+
     if (this.id) {
-      this.phonesService.updatePhone(this.id, obj).subscribe(data => {
+      this.phonesService.updatePhone(this.id, submitData).subscribe(data => {
         this.router.navigate(['/admin/phones'])
       })
     } else {
-      this.phonesService.createPhone(obj).subscribe(data => {
+      this.phonesService.createPhone(submitData).subscribe(data => {
         this.router.navigate(['/admin/phones'])
       })
     }
+  }
 
+  resultString(e: any) {
+    if (e && e.target && typeof e.target.result === 'string') {
+      return e.target.result;
+    }
+    return '';
+  }
+
+  changeImage(event: any) {
+    const arrayImageTypes = ['image/png', 'image/jpg', 'image/jpeg'];
+    const file = event.target.files[0];
+
+    if (file.size > 500000) {
+      return alert('Kích thước file quá lớn!');
+    } else if (!arrayImageTypes.includes(file.type)) {
+      return alert('File không đúng định dạng!');
+    }
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      this.imageBase64 = e.target?.result;
+      console.log(this.imageBase64);
+
+      const image = new Image();
+      image.src = this.resultString(e);
+    }
+
+    reader.readAsDataURL(file);
   }
 
 }

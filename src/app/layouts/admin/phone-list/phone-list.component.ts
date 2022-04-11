@@ -22,6 +22,7 @@ export class PhoneListComponent implements OnInit {
 
   delete(id: string | number) {
     this.phoneService.deletePhone(id).subscribe(data => {
+      console.log(data);
       this.onGetList();
     })
   }

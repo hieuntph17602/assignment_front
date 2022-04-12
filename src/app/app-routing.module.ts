@@ -1,3 +1,4 @@
+import { PhoneFormEditComponent } from './phone-form-edit/phone-form-edit.component';
 import { LoginComponent } from './layouts/clients/login/login.component';
 import { PhoneListComponent } from './layouts/admin/phone-list/phone-list.component';
 import { PhoneFormComponent } from './layouts/admin/phone-form/phone-form.component';
@@ -50,7 +51,7 @@ const routes: Routes = [
       },
       {
         path: 'phones/edit/:id',
-        component: PhoneFormComponent
+        component: PhoneFormEditComponent
       }
     ]
   }

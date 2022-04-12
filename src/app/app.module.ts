@@ -25,6 +25,7 @@ import { LoginComponent } from './layouts/clients/login/login.component';
 import { AuthServiceService } from './services/auth-service.service';
 import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
 import { StatusBtnComponent } from './components/status-btn/status-btn.component';
+import { PhoneFormEditComponent } from './phone-form-edit/phone-form-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { StatusBtnComponent } from './components/status-btn/status-btn.component
     AsideComponent,
     IndexAdminComponent,
     HeaderAdminComponent,
-    FooterAdminComponent, PhoneFormComponent, PhoneListComponent, ShowErrorComponent, LoginComponent, StatusBtnComponent
+    FooterAdminComponent, PhoneFormComponent, PhoneListComponent, ShowErrorComponent, LoginComponent, StatusBtnComponent, PhoneFormEditComponent
   ],
   imports: [
     BrowserModule,
